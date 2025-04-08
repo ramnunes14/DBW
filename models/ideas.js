@@ -1,6 +1,6 @@
 const ideas = [
     {
-        nome: "Suporte ao Cliente",
+        nome: "Dinheiro",
 
     },
     {
@@ -12,11 +12,11 @@ const ideas = [
         
     },
     {
-        nome: "Financeiro",
+        nome: "Carros",
         
     },
     {
-        nome: "Financeiro",
+        nome: "Telefones",
         
     }
 ];
