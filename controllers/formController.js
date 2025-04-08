@@ -1,3 +1,5 @@
+import pages from "../models/menu.js";
+import ideas from "../models/ideas.js";
 const handleFormSubmit = (req, res) => {
     const tema = req.body.tema; 
     const sim = req.body.yes;   
@@ -9,8 +11,14 @@ const handleFormSubmit = (req, res) => {
     else{
         decisao=false;
     }
+    console.log(req.baseUrl);
+    res.render("start", { 
+        caminho: "Brainstorming",
+        pages,
+        ideas,
+        tema, 
+        decisao });
     
-    res.send("Este é o tema: " + tema + " e a decisão é: " + decisao);
 };
 
 export default handleFormSubmit;
