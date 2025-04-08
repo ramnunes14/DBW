@@ -1,0 +1,18 @@
+
+<%- include('../includes/header') %>
+<%- include('../includes/subheader') %>
+<section class="contatos">
+    <h2>Contatos</h2>
+    <div class="lista-contatos">
+        <% info.forEach(contato => { %>
+            <div class="contato">
+                <i class="<%= contato.icone %>"></i>
+                <h3><%= contato.nome %></h3>
+                <p><strong>Email:</strong> <%= contato.email %></p>
+                <p><strong>Telefone:</strong> <%= contato.telefone %></p>
+            </div>
+        <% }); %>
+    </div>
+</section>
+<%- include('../includes/footer') %>
+

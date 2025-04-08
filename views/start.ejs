@@ -1,0 +1,46 @@
+<%- include('../includes/header') %>
+<%- include('../includes/subheader') %>
+
+<h2 class="sub-header">Choose the theme of your brainstorming session</h2>
+
+<div class="input-wrapper">
+    <form action="/submit" method="POST">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="myInput" name="tema" placeholder="Write the theme of your session or choose one of the following themes" value="">
+
+        <div class="sub-div">
+            <% ideas.forEach(function(idea) { %>
+                <button type="button" class="myButton"><%= idea.nome %></button>
+            <% }); %>
+        </div>
+
+        <div class="privacy">
+            <h1 class="item full">
+              Do you pretend to make your session public and visible to other users?
+            </h1>
+
+            <div class="item half">
+              <!-- Checkbox 'Yes' com valor 'yes' -->
+              <input name="yes" type="checkbox" id="yes" >
+            </div>
+            <label for="yes" class="item text">
+              Yes, I want my session to be visible to everyone
+            </label>
+
+            <div class="item half">
+              <!-- Checkbox 'No' com valor 'no' -->
+              <input name="no" type="checkbox" id="no">
+            </div>
+            <label for="no" class="item text">
+              No, I don’t want to share it
+            </label>
+        </div>
+
+        <h1 class="reminder"><i class="fa-solid fa-circle-info"></i>After submitting your theme, a timer will start where you need to write some ideas related with the theme</h1>
+        
+        <button class="Submeter" type="submit">Submit</button>
+    </form>
+</div>
+
+<%- include('../includes/footer') %>
+

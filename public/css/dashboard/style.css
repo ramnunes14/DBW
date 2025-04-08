@@ -1,0 +1,42 @@
+.welcome{
+    margin-top:2%;
+    background-color: #D4DBF9;
+    width: 80%;
+    height: 20%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+.welcome h1{
+    display: inline-block;
+    margin-left: 5%;
+    margin-bottom: 6%;
+    color:black;
+}
+.start{
+    margin-top:2%;
+    background-color: white;
+    width: 80%;
+    height: 25%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+.options{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    width: 130%;
+    height: 40%;
+    gap:2%;
+    margin-bottom: 2%;
+}
+.box{
+    margin-top:2%;
+    background-color: white;
+    width: 30%;
+    
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}

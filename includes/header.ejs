@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= caminho === "Contato" ? caminho : "MadDevWorks " + caminho %></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bytesized&family=Jua&family=Oswald:wght@700&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+    <link href="/css/<%= caminho %>/style.css" rel="stylesheet">
+    <link href="/css/header.css" rel="stylesheet">
+</head>
+<body>
+    <header class="cab-logo">
+        <a href="/"><h1 class="logo" >BRAINPLAY</h1></a>
+    </header>
+    <section class="div-2">
+        <nav class="Menu">
+            
+            <ul>
+                <h1>Menu</h1>
+                <% pages.forEach(pages => { %>
+                    <li class="<%= pages.nome %>"><a  href="<%= pages.caminho %>"><i class="<%= pages.icone %>"></i><%= pages.nome %></a></li>
+                <% }); %>
+            </ul>
+        </nav>
+
+    <main class="content">
+

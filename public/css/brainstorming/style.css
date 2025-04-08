@@ -1,0 +1,98 @@
+
+.sub-header{
+    display: inline-block;
+    margin-top: 3%;
+    color:black;
+    font-size: 100%;
+    margin-bottom: 3%;
+}
+.input-wrapper {
+    position: relative;
+    width: 80%;
+  }
+
+  .input-wrapper form input {
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+
+  .input-wrapper form .fa-magnifying-glass {
+    position: absolute;
+    top: 15%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: black;
+  }
+.sub-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #ccc;
+    min-height: 50px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    gap:3%;
+}
+.sub-div button{
+    padding: 0.5%;
+    border-radius: 10px;
+    border:0px;
+}
+.privacy {
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    width: 100%;
+  }
+  
+  .item {
+    color: black;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .full {
+    flex-basis: 100%;
+  }
+  
+  .half {
+    flex-basis: 5%;
+  }
+  
+  .text {
+    flex-basis: 90%;
+    
+  }
+  #yes, #no {
+    transform: scale(3); /* aumenta a checkbox */
+    margin-right: 8px;     /* espacinho entre checkbox e texto */
+    border: 0px;
+  }
+  .reminder{
+    width: 100%;
+    display:inline-block;
+    margin-top: 6%;
+    color:black;
+    font-size: 20px;
+  }
+  
+  .reminder i {
+    color:black;
+  }
+.Submeter{
+    margin-top: 7%;
+    padding: 2%;
+    width: 30%;
+    border-radius: 10px;
+    border:0px;
+    background-color:#E5A93B ;
+    color:white;
+}
