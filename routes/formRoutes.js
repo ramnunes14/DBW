@@ -4,6 +4,6 @@ import handleFormSubmit from '../controllers/formController.js';
 
 const router = express.Router();
 
-router.post('/Brainstorming', handleFormSubmit);
+router.post('/Brainstorming/Level1', handleFormSubmit);
 
 export default router;

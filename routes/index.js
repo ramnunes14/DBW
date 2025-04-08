@@ -18,6 +18,7 @@ const router = express.Router();
 router.use("/", homeRoutes);
 router.use("/dashboard", dashboardRoutes);
 router.use("/brainstorming", StartRoutes);
+router.use("/brainstorming/Level1", StartRoutes);
 router.use("/mysessions", SessionsRoutes);
 router.use("/sessions", MySessionsRoutes);
 router.use("/login", LoginRoutes);

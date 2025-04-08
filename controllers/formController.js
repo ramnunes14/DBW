@@ -12,7 +12,7 @@ const handleFormSubmit = (req, res) => {
         decisao=false;
     }
     console.log(req.baseUrl);
-    res.render("start", { 
+    res.render("niveis/level1", { 
         caminho: "Brainstorming",
         pages,
         ideas,

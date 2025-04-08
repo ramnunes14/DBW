@@ -1,0 +1,16 @@
+<%- include('../../includes/header') %>
+<%- include('../../includes/subheader') %>
+
+<h1 > <%=tema  %></h1>
+
+<div >
+    
+    <% if(decisao) { %>
+        <h1>Privado</h1>
+    <% } else { %>
+        <h1>Público</h1>
+    <% } %>
+    
+</div>
+
+<%- include('../../includes/footer') %>
