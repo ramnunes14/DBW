@@ -6,12 +6,13 @@
 <div class="input-wrapper">
     <form action="/Brainstorming/Level1" method="POST">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" id="myInput" name="tema" placeholder="Write the theme of your session or choose one of the following themes" value="">
+        <input type="text" id="myInput" name="tema" placeholder="Write the theme of your session or choose one of the following themes" value="" required>
 
         <div class="sub-div">
-            <% ideas.forEach(function(idea) { %>
-                <button type="button" class="myButton"><%= idea.nome %></button>
-            <% }); %>
+          <% ideas.forEach(function(idea) { %>
+            <button type="button" class="myButton"><%= idea %></button>
+          <% }); %>
+          
         </div>
 
         <div class="privacy">
@@ -29,7 +30,7 @@
 
             <div class="item half">
               <!-- Checkbox 'No' com valor 'no' -->
-              <input name="no" type="checkbox" id="no">
+              <input name="no" type="checkbox" id="no" >
             </div>
             <label for="no" class="item text">
               No, I don’t want to share it

@@ -95,7 +95,25 @@
     border:0px;
     background-color:#E5A93B ;
     color:white;
+    margin-bottom:3%;
 }
 .content{
   color:black;
+}
+.circulo {
+  width: 300px;            
+  height: 300px;           
+  background-color: white; 
+  border-radius: 50%;      
+  border: 8px solid #F6AC35; 
+  display: flex;           
+  justify-content: center; 
+  align-items: center;     
+  color: black;            
+  font-size: 128px;          
+  
+}
+.tema{
+  display: inline-block;
+  margin-top: 3%;
 }

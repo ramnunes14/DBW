@@ -11,6 +11,8 @@ import SignUpRoutes from './signupRoutes.js';
 import FAQRoutes from './faqRoutes.js';
 import WhyChooseUsRoutes from './chooseRoutes.js';
 import formRoutes from './formRoutes.js';  
+import ideasRoutes from './ideasRoutes.js';
+import ideasHTTPSRoutes from './ideasRoutesHTTPS.js';
 import errorRoutes from './404Routes.js';
 
 const router = express.Router();
@@ -19,6 +21,7 @@ router.use("/", homeRoutes);
 router.use("/dashboard", dashboardRoutes);
 router.use("/brainstorming", StartRoutes);
 router.use("/brainstorming/Level1", StartRoutes);
+router.use("/brainstorming/Level2", StartRoutes);
 router.use("/mysessions", SessionsRoutes);
 router.use("/sessions", MySessionsRoutes);
 router.use("/login", LoginRoutes);
@@ -28,6 +31,11 @@ router.use("/profile", ProfileRoutes);
 router.use("/faq", FAQRoutes);
 router.use("/whychooseus", WhyChooseUsRoutes);
 router.use("/form", formRoutes);
+router.use(ideasRoutes);
+router.use(ideasHTTPSRoutes);
+
+
+
 
 router.use("*", errorRoutes); 
 

@@ -5,5 +5,5 @@ import handleFormSubmit from '../controllers/formController.js';
 const router = express.Router();
 
 router.get("/", getStart);
-router.post('/submit', handleFormSubmit);
+
 export default router;
