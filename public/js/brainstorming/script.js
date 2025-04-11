@@ -1,7 +1,7 @@
 const circulo = document.getElementById('contador');
 const ideasDiv = document.getElementById('sub-div');
 
-let count = 20;
+let count = document.getElementById('contador').textContent;
 let contadorAtivo = true;  
 
 
@@ -9,7 +9,7 @@ function decrementarContador() {
   if (count > 0) {
     count--; 
     circulo.textContent = count; 
-  } else if(count === 20){
+  } else if(count === circulo.textContent){
         atualizarIdeias();
   }
   else if (count === 0 && contadorAtivo) {

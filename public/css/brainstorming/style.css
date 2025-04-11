@@ -105,13 +105,21 @@
   height: 300px;           
   background-color: white; 
   border-radius: 50%;      
-  border: 8px solid #F6AC35; 
   display: flex;           
   justify-content: center; 
   align-items: center;     
   color: black;            
   font-size: 128px;          
   
+}
+.pr{
+  border: 8px solid green; 
+}
+.sg{
+  border: 8px solid yellow; 
+}
+.trc{
+  border: 8px solid red; 
 }
 .tema{
   display: inline-block;

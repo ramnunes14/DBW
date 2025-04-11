@@ -3,35 +3,33 @@ import { gerarIdeias } from "../controllers/ideasController.js";
 
 const handleFormSubmit = async (req, res) => {
     try {
-        const tema = req.body.tema || '';  // Default to empty string if tema is undefined
-        const sim = req.body.yes === 'on'; // Consider checking if 'sim' is true
+        const tema = req.body.tema || '';
+        if (!req.session.tema) {
+          req.session.tema = [];  
+        }
         
-        const decisao = sim;  // Directly assign sim to decisao, no need for extra condition
+        req.session.tema.push(req.body.tema);  
         
-        // Verifica se o tema é válido
+        const sim = req.body.yes === 'on'; 
+        const decisao = sim;  
         if (!tema.trim()) {
             throw new Error("O tema é obrigatório.");
         }
-
-        // Gera as ideias baseadas no tema
         const palavras = await gerarIdeias(tema);
         
-        // Verifica se o resultado é um array
+       
         if (!Array.isArray(palavras)) {
             throw new Error("As ideias não foram retornadas como um array.");
         }
 
-        
-        console.log(req.path);
-        // Determina qual página renderizar
-        const page = req.path.slice(1);  // Pode substituir com o nome de página desejada
-
-        
+  
+        const page = req.path.slice(1);  
         res.render(page, { 
             caminho: "Brainstorming",
             pages,
             ideas: palavras,
             tema, 
+            ideasdecididas:req.session.tema,
             decisao
         });
 
