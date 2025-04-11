@@ -1,7 +1,14 @@
 import axios from 'axios';
 import formatWords from '../models/ideas.js';
 
-export const gerarIdeias = async () => {
+export const gerarIdeias = async (tema = null) => {
+  let content;
+  if(tema==null){
+    content='Dá-me 5 palavras diferentes em português de Portugal para brainstorm rec. Apenas palavras, no formato JSON válido, como ["Musica", "Televisao", "Praia", "Futebol", "Cristiano Ronaldo"], este é um exemplo de palavras, gera aleatoriamente.';
+  }
+  else{
+    content='Dá-me 5 palavras  em português de Portugal para brainstorm relacionadas com '+ tema +'. Apena palavras, no formato JSON válido, do tipo ["a", "b", "c", "d", "e"].';
+  }
   const messages = [
     { 
       role: 'system', 
@@ -9,7 +16,7 @@ export const gerarIdeias = async () => {
     },
     { 
       role: 'user', 
-      content: 'Dá-me 5 palavras diferentes em português de Portugal para brainstorm. Apenas palavras, no formato JSON válido, como ["Musica", "Arte", "Desporto", "Tecnologia", "Yoga"], mas não pode ser estas palavras.' 
+      content: content 
     }
   ];
 
@@ -27,12 +34,12 @@ export const gerarIdeias = async () => {
 
     const conteudo = resposta.data.choices[0].message?.content;
     const palavras = formatWords(conteudo); // Formata as palavras
-    console.log('Resposta da API:', resposta.data);  // Log da resposta da API
+    
 
     return palavras;  // Retorna as palavras para o controlador 'getStart'
 
   } catch (erro) {
-    console.error("Erro ao gerar ideias:", erro.message);
+    
     throw new Error("Erro ao gerar ideias"); // Lança um erro se algo der errado
   }
 };

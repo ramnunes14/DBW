@@ -13,7 +13,7 @@ const getStart = async (req, res) => {
       throw new Error("As ideias não foram retornadas como um array.");
     }
 
-    console.log(palavras);  // Verifica se as ideias estão corretas
+    
 
     // Renderiza a página com as palavras
     res.render("start", {

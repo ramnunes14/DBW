@@ -20,7 +20,11 @@ function decrementarContador() {
 
 function atualizarIdeias() {
   
-  fetch('/gerar-ideias')
+  const temaElement = document.querySelector('.tema'); // Seleciona o <h1> com a classe "tema"
+  const tema = temaElement ? temaElement.textContent : ''; // Pega o texto dentro do <h1>
+  console.log(tema); // Aqui você pode verificar o conteúdo
+
+  fetch('/gerar-ideias?tema='+ tema)
     .then(response => response.json()) 
     .then(data => {
       

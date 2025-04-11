@@ -1,0 +1,37 @@
+<%- include('../../includes/header') %>
+<%- include('../../includes/subheader') %>
+
+<h1>LEVEL 1</h1>
+
+<div>
+  <% if(decisao) { %>
+    <h1>Privado</h1>
+  <% } else { %>
+    <h1>Público</h1>
+  <% } %>
+</div>
+
+<div class="circulo" id="contador">20</div> 
+<h1 class="tema"><%=tema  %></h1>
+<div class="input-wrapper">
+    <form action="/Brainstorming/Level2" method="POST">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="myInput" name="tema" placeholder="Write the theme of your session or choose one of the following themes" value="" required>
+
+        <div class="sub-div" id="sub-div">
+            <% ideas.forEach(function(idea) { %>
+                <button type="button" class="myButton"><%= idea %></button>
+              <% }); %>
+        </div>
+
+        <h1 class="reminder"><i class="fa-solid fa-circle-info"></i>After submitting your theme, a timer will start where you need to write some ideas related with the theme</h1>
+        
+        <button class="Submeter" type="submit">Submit</button>
+    </form>
+    
+  
+</div>
+
+
+
+<%- include('../../includes/footer') %>
